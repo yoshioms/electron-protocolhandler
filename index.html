@@ -12,8 +12,6 @@
 
     protocolHandlerBtn.addEventListener('click', function() {
         const pagePath = path.join('file://', app.getAppPath(), './protocol-link.html')
-        alert(pagePath);
-        console.log(pagePath);
         shell.openExternal(pagePath)
     })
 </script>
