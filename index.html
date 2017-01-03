@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <button id="protocol-handler">Protocol Handler</button>
+</body>
+<script>
+    const shell = require('electron').shell
+    const app = require('electron').remote.app
+    const path = require('path')
+
+    const protocolHandlerBtn = document.getElementById('protocol-handler')
+
+    protocolHandlerBtn.addEventListener('click', function() {
+        const pagePath = path.join('file://', app.getAppPath(), './protocol-link.html')
+        alert(pagePath);
+        console.log(pagePath);
+        shell.openExternal(pagePath)
+    })
+</script>
+
+</html>
